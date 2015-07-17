@@ -1,0 +1,115 @@
+<tw-storydata name="Duel!" startnode="1" creator="Twine" creator-version="2.0.6" ifid="468138B3-1D98-41A1-8CEC-E64A5625B242" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.transition-in {
+	opacity: 0;
+	position: absolute;
+}
+.passage {
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+.transition-out {
+	opacity: 0 !important;
+	position: absolute;
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+</script><tw-passagedata pid="1" name="A Bloody Battlefield" tags="" position="1101,475">As you awaken after passing out, you see the tattered banner of your home country, France.  You are a simple peasant, conscripted into the army as a low ranking
+soldier.
+&lt;img src=&quot;https://s-media-cache-ak0.pinimg.com/736x/d9/7e/e1/d97ee1c9c33b77e232bf8c5105a53337.jpg&quot; width=&quot;736&quot; height=&quot;460&quot; alt=&quot;Battlefield&quot;&gt;
+As you take a look around you, you can&#x27;t see any sign of your own army, only corpses and the heavy rain.  In the distance, however, you see the victorious English army quickly making their way towards you.
+
+(link:&quot;This looks bad.&quot;)[(set: $var to 4)(goto:&quot;Cornered&quot;)]
+
+</tw-passagedata><tw-passagedata pid="2" name="Cornered" tags="" position="1103,600">The English army quickly encircles you and a duke steps out of the crowd.
+&lt;img src=&quot;http://www.anticsonline.co.uk/l.aspx?k=2629112&quot; width=&quot;800&quot; height=&quot;577&quot; alt=&quot;English knights&quot;&gt; 
+&quot;You filthy French have been defeated, peasant.  Your army has been scattered and crushed.  I should end your life here and now, but I am in a mood for sport.  If you can beat my strongest knight in combat, I will let you live.&quot;
+
+Well it doesn&#x27;t look like you&#x27;ve got much choice...
+
+[[A Fight? Count me in!]] OR [[Make a break for it!]]
+</tw-passagedata><tw-passagedata pid="3" name="A Fight? Count me in!" tags="" position="1104,749">The knight lumbers out in his heavy plate mail, brandishing a huge claymore.  You, on the other hand, have no weapon, no armor, and poor sword-fighting skills.  He charges at you and appears to be intending  to swing horizontally at you.
+
+You decide to... [[Act on Your Instincts]] OR [[Try to be Clever]]
+&lt;div&gt;&lt;/div&gt;
+&lt;img src=&quot;http://static.comicvine.com/uploads/original/11114/111142328/3718511-6384852764-15004.jpg&quot; width=&quot;521&quot; height=&quot;596&quot; alt=&quot;A strong knight&quot;&gt; </tw-passagedata><tw-passagedata pid="4" name="Make a break for it!" tags="" position="1306,605">You try to break through the ring of heavily armored knights like an idiot but they chop you into bits.
+
+Well done.
+
+GAME OVER</tw-passagedata><tw-passagedata pid="5" name="Act on Your Instincts" tags="" position="971,898">You manage to dodge his swipe with your reflexes, and you have an opening.  There is a sword in a body nearby.
+
+You... [[Punch Him]] OR [[Go for the Sword]]</tw-passagedata><tw-passagedata pid="6" name="Try to be Clever" tags="" position="1273,901">While the knight is charging at you, you attempt to survey your options.  There is a sword in a body nearby.
+
+You... [[Intidate with Sword]] OR [[Insult Him]] OR [[Check Surroundings]] (if:(history:) contains &quot;Check Surroundings&quot;)[OR [[Use the Mud]]]</tw-passagedata><tw-passagedata pid="7" name="Punch Him" tags="Game-Over" position="1053,1051">You punched his thick armor with your fists. Your fists really hurts. The knight is mildly annoyed from your stupidity and kills you.
+
+ (link: &quot;You Lose&quot;)[&lt;img src=&quot;http://orig08.deviantart.net/e418/f/2012/254/a/d/classic_game_over_screen_by_el_tortuga-d5eeh9l.gif&quot; width=&quot;600&quot; height=&quot;400&quot; alt=&quot;Game Over&quot;&gt;]</tw-passagedata><tw-passagedata pid="8" name="Go for the Sword" tags="" position="893,1048">You leaped to the body, grabbed the sword and struggled to get up to your fighting stance.  You manage to swing and land a glancing blow on his arm that momentarily distracts him.
+
+You can now .... [[Parry Him]] OR [[Stab Him]]</tw-passagedata><tw-passagedata pid="9" name="Intidate with Sword" tags="" position="1196,1051">As you remove the sword from the body, you attempt to intimidate the knight by flourishing and swinging the sword like a maniac.  Your hands are wet from the rain, however, and the sword flies out of your hand.  The knight promptly swings at your head and kills you.
+
+GAME OVER</tw-passagedata><tw-passagedata pid="10" name="Use the Mud" tags="" position="1371,1055">You decided to duck under his swing and grab a handful of mud.  You throw it at his visor and manage to blind him.  You need to take advantage of this opportunity.
+
+You better... [[Shove Him]] OR [[Grab Rocks]]
+
+</tw-passagedata><tw-passagedata pid="11" name="Parry Him" tags="" position="781,1196">(if: !($parrynum is 3))[Gaining your confidence from the successful parry, you decided to continue to use your sword. You manage to parry his blow and he is momentarily off-guard. Being inexperienced with swordplay, however, you dropped your sword in the process.  You notice that a log was under the body you moved earlier.
+
+You decide to [[Pick the sword up]] OR [[Grab the Log]]
+](else:)[
+Your poor skill at fighting makes parrying these blows taxing for you.  You try to parry once more, but you are too tired to parry successfully. The knight&#x27;s blow catches your side.  As you black out from your wound you catch a faint glimspse of a sword above your head.
+
+GAME OVER
+]
+(set: $parrynum to $parrynum+1)
+
+</tw-passagedata><tw-passagedata pid="12" name="Stab Him" tags="Game-Over" position="978,1197">You take this opportunity to try to land a blow on him, but the knight is a seasoned veteran.  He easily deflects your blow and lands a riposte that puts a hole in your chest.  You fall over and bleed out.
+
+ (link: &quot;You Lose&quot;)[&lt;img src=&quot;http://orig08.deviantart.net/e418/f/2012/254/a/d/classic_game_over_screen_by_el_tortuga-d5eeh9l.gif&quot; width=&quot;600&quot; height=&quot;400&quot; alt=&quot;Game Over&quot;&gt;]
+</tw-passagedata><tw-passagedata pid="13" name="Pick the sword up" tags="" position="737,1347">You pick your sword back up but the knight swings again.
+(set: $parry to true)
+
+You decide to...[[Parry Him]] OR [[Go for the Kill]]
+</tw-passagedata><tw-passagedata pid="14" name="Block the Sword" tags="" position="1002,1350">You use the log diagonally to catch the blow, and the log is barely thick enough to stop the blow.  The sword, however, is stuck in the log.  The knight attempts to pull out his sword in vain.  You twist the log to wrest the sword from the knight&#x27;s hands.  With the knight defenseless, you remove the log from the sword.
+
+With the sword in your possesion, you...[[Finish Him]] OR (link:&quot;Humilliate Him&quot;)[(set: $var to 4)(goto:&quot;Joke Ending&quot;)]
+</tw-passagedata><tw-passagedata pid="15" name="Insult Him" tags="" position="1221,1207">You scream at the top of your lungs, &quot;YOUR MOTHER WAS A HAMSTER, AND YOUR FATHER SMELT OF ELDERBERRIES!&quot;
+
+Thoroughly enraged, the knight swings wildly at you and momentarily loses his balance.  While he regains his composure, you decide to grab a nearby sword.
+
+
+[[Go for the Sword]]</tw-passagedata><tw-passagedata pid="16" name="Shove Him" tags="" position="1425,1206">You push him to the ground as he is blinded.  With his heavy suit of armor, he cannot lift himself from the mud.  In the confusion, you take his sword from him.
+
+[[Finish Him]]</tw-passagedata><tw-passagedata pid="17" name="Go for the Kill" tags="Game-Over" position="737,1474">While your aggressive move surprises the knight, your strike was too weak.  He counters and mortally wounds you.  Perhaps you shouldn&#x27;t have relied on your poor swordsmanship skill.
+
+ (link: &quot;You Lose&quot;)[&lt;img src=&quot;http://orig08.deviantart.net/e418/f/2012/254/a/d/classic_game_over_screen_by_el_tortuga-d5eeh9l.gif&quot; width=&quot;600&quot; height=&quot;400&quot; alt=&quot;Game Over&quot;&gt;]</tw-passagedata><tw-passagedata pid="18" name="Check Surroundings" tags="" position="1404,902">As you look around, you realize that the ground is muddy after the rain.  You see a supply of black powder in a bag on the ground.  You quickly snatch it.  You&#x27;re not sure what you could use it for, but you take it anyway.
+
+(link:&quot;Go Back&quot;)[(set: $var to 4)(goto:&quot;Try to be Clever&quot;)]
+(set: $gunpowder to true)</tw-passagedata><tw-passagedata pid="19" name="Champion Ending" tags="Ending" position="1151,1477">As the knight slumps and falls from the sword, the crowd is speechless.  Against all odds, you are victorious.  The duke, a man of his word, agrees to let you go.  You have somehow lived to see another day.
+&lt;img src=&quot;https://t1ffanychanel.files.wordpress.com/2014/02/55415495-victory.jpg&quot; width=&quot;609&quot; height=&quot;480&quot; alt=&quot;Duelist end&quot;&gt; 
+CHAMPION ENDING (1/3)</tw-passagedata><tw-passagedata pid="20" name="Grab the Log" tags="" position="867,1348">You quickly pull the log from out under the body.  As the knight goes to swing again, you must quickly find some sort of way to utilize this log you picked up.
+
+As he swings, you... [[Hit Him]] OR [[Block the Sword]]</tw-passagedata><tw-passagedata pid="21" name="Hit Him" tags="Game-Over" position="862,1475">You try to smack the knight with the log.  That was stupid.  The knight cleanly cuts you in two.
+
+ (link: &quot;You Lose&quot;)[&lt;img src=&quot;http://orig08.deviantart.net/e418/f/2012/254/a/d/classic_game_over_screen_by_el_tortuga-d5eeh9l.gif&quot; width=&quot;600&quot; height=&quot;400&quot; alt=&quot;Game Over&quot;&gt;]</tw-passagedata><tw-passagedata pid="22" name="Finish Him" tags="" position="1151,1347">Wanting to be done and over with it, you pierce his heart with your sword.  You stand triumphant.
+
+(link:&quot;Victory!&quot;)[(set: $var to 4)(goto:&quot;Champion Ending&quot;)]</tw-passagedata><tw-passagedata pid="23" name="Joke Ending" tags="Ending" position="1002,1477">You cut the knight&#x27;s arm off.
+&quot;Tis but a scratch.&quot; the knight says.
+Befuddled, you cut off his other arm.  &quot;You&#x27;ve got no arms left,&quot; you say.
+&quot;Just a flesh wound.&quot; he says.
+You decided to cut off one of his legs.
+&quot;Right, I&#x27;ll do you for that!&quot; he says.
+&quot;What are you going to do, bleed on me?&quot; you exclaim.
+&quot;I&#x27;m invincible!&quot;
+You cut off his other leg.
+&lt;img src=&quot;http://content8.flixster.com/question/60/67/31/6067310_std.jpg&quot; width=&quot;190&quot; height=&quot;270&quot; alt=&quot;Joke end&quot;&gt;
+&quot;All right; we&#x27;ll call it a draw.&quot;
+
+JOKE ENDING (3/3)</tw-passagedata><tw-passagedata pid="24" name="Grab Rocks" tags="" position="1316,1349">You scope two rocks off the floor.  (if: $gunpowder is false)[
+You have no idea why you even thought to pick them up.  You throw them at the knight.  He is unfazed and his wiped his visor clean.  Your only option is to go for the nearby sword.
+
+[[Go for the Sword]]
+](else:)[It occurs to you that you might be able to strike the rocks together to light the black powder.  While the crowd is distracted by the spectacle the knight is making, you ignite the bag and run for your life.
+
+(link:&quot;Run!&quot;)[(set: $var to 4)(goto:&quot;Secret Ending&quot;)]
+]</tw-passagedata><tw-passagedata pid="25" name="Secret Ending" tags="Ending" position="1317,1476">As the black powder explodes, you manage to burst through the crowd in the chaos.  Too disoriented to do anything, the army is unable to prevent your escape.  Your trickery and cunning has won you the day.  Well done!
+&lt;img src=&quot;https://t1ffanychanel.files.wordpress.com/2014/02/55415495-victory.jpg&quot; width=&quot;609&quot; height=&quot;480&quot; alt=&quot;Secret end&quot;&gt; 
+SECRET ENDING (2/3)</tw-passagedata></tw-storydata>
